@@ -1,13 +1,13 @@
 @font-face {
     font-family: "ProximaNova-Regular";
-    src: url("fonts/ProximaNova-Regular.ttf") format("truetype"),
-    url("fonts/ProximaNova-Regular.woff") format("woff");
+    src: url("../fonts/ProximaNova-Regular.ttf") format("truetype"),
+    url("../fonts/ProximaNova-Regular.woff") format("woff");
 }
 
 @font-face {
     font-family: "ProximaNova-Semibold";
-    src: url("fonts/ProximaNova-Semibold.ttf") format("truetype"),
-    url("fonts/ProximaNova-Semibold.woff") format("woff");
+    src: url("../fonts/ProximaNova-Semibold.ttf") format("truetype"),
+    url("../fonts/ProximaNova-Semibold.woff") format("woff");
 }
 
 body {
@@ -76,37 +76,37 @@ input[type="password"] {
     font-family: "ProximaNova-Regular", sans-serif;
 }
 
-label:first-of-type {
+.first-name {
     margin-right: 10px;
 }
 
-label:nth-of-type(3) {
-    margin: 15px 0;
-}
-
-label:nth-of-type(5) {
-    margin: 15px 0 10px 0;
-}
-
-label:first-of-type input,
-label:nth-of-type(2) input {
+.first-name input,
+.last-name input {
     width: 127.5px;
 }
 
-label:nth-of-type(3) input {
-    background: #f0f0f0 url("img/man.png") 97% 50% no-repeat;
+.username {
+    margin: 15px 0;
 }
 
-label:nth-of-type(4) input {
+.username input {
+    background: #f0f0f0 url("../img/man.png") 97% 50% no-repeat;
+}
+
+.email input {
     width: 290px;
 }
 
-label:nth-of-type(5) input {
-    background: #f0f0f0 url("img/lock.png") 97% 50% no-repeat;
+.password {
+    margin: 15px 0 10px 0;
 }
 
-label:nth-of-type(3) input,
-label:nth-of-type(5) input {
+.password input {
+    background: #f0f0f0 url("../img/lock.png") 97% 50% no-repeat;
+}
+
+.username input,
+.password input {
     padding-right: 40px;
     width: 260px;
 }
@@ -115,30 +115,29 @@ a {
     text-decoration: none;
     font-family: "ProximaNova-Semibold", sans-serif;
     color: #888888;
+    transition: 0.2s;
 }
 
 a:hover {
     color: #666666;
-    transition: 0.2s;
 }
 
 button {
-    width: 100px;
     display: block;
     margin: 15px auto;
     font-size: 15px;
     color: #ffffff;
-    padding: 10px;
+    padding: 10px 25px;
     text-align: center;
     background-color: #fea15c;
     border: 0;
     border-radius: 5px;
     font-family: "ProximaNova-Semibold", sans-serif;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 button:hover {
-    transition: 0.2s;
     box-shadow: inset 0 0 3px 1px #ff6600;
     background-color: #ff9600;
 }
@@ -159,22 +158,19 @@ input[type="checkbox"] + label {
 
 /* Checkbox styling */
 
-input[type="checkbox"]:checked,
-input[type="checkbox"]:not(:checked) {
+input[type="checkbox"] {
     position: absolute;
     left: -9999px;
 }
 
-input[type="checkbox"]:checked + label,
-input[type="checkbox"]:not(:checked) + label {
+input[type="checkbox"] + label {
     display: inline-block;
     position: relative;
     padding-left: 23px;
     cursor: pointer;
 }
 
-input[type="checkbox"]:checked + label::before,
-input[type="checkbox"]:not(:checked) + label::before {
+input[type="checkbox"] + label::before {
     content: "";
     position: absolute;
     left: 0;
@@ -186,8 +182,7 @@ input[type="checkbox"]:not(:checked) + label::before {
     background-color: #f0f0f0;
 }
 
-input[type="checkbox"]:checked + label::after,
-input[type="checkbox"]:not(:checked) + label::after {
+input[type="checkbox"] + label::after {
     content: "";
     position: absolute;
     transition: all 0.15s ease;
@@ -207,6 +202,8 @@ input[type="checkbox"]:not(:checked) + label::after {
 input[type="checkbox"]:checked + label::after {
     opacity: 1;
 }
+
+/* Using text-overflow */
 
 .text-overflow {
     margin: 0 87px;
