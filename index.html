@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <p class="h1"><span>Signup</span> Form</p>
+        <form action="#">
+            <label for="first-name">
+                <input id="first-name" type="text" name="First name" placeholder="First Name" required>
+            </label>
+            <label for="last-name">
+                <input id="last-name" type="text" name="Last name" placeholder="Last Name" required>
+            </label>
+            <label for="username">
+                <input id="username" type="text" name="Username" min="3" placeholder="Username" required>
+            </label>
+            <label for="email">
+                <input id="email" type="email" name="E-Mail" placeholder="Email Address" required>
+            </label>
+            <label for="password">
+                <input id="password" type="password" name="Password" placeholder="Password" min="8" required autocomplete="disabled">
+            </label>
+            <div>
+                <input id="agreement" type="checkbox" name="agreement" required>
+                <label for="agreement">I Agree to the <a href="#">terms of use</a></label>
+            </div>
+            <button type="submit">Sigh Up</button>
+            <p>Have an account with us? <a href="#">Login here</a></p>
+            <p>More info about us <a href="#">here...</a></p>
+        </form>
+    </div>
+</body>
+</html>

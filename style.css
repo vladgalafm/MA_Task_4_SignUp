@@ -1,0 +1,207 @@
+@font-face {
+    font-family: "ProximaNova-Regular";
+    src: url("fonts/ProximaNova-Regular.ttf") format("truetype"),
+    url("fonts/ProximaNova-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "ProximaNova-Semibold";
+    src: url("fonts/ProximaNova-Semibold.ttf") format("truetype"),
+    url("fonts/ProximaNova-Semibold.woff") format("woff");
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: 100%;
+    background-color: #f7f7f7;
+}
+
+.container {
+    box-sizing: border-box;
+    width: 360px;
+    border: 0;
+    margin: 0 auto;
+    padding: 0;
+    font-family: "ProximaNova-Regular", sans-serif;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.h1 {
+    margin: 0 0 20px 0;
+    font-size: 26px;
+    text-align: left;
+    color: #999999;
+    font-family: "ProximaNova-Regular", sans-serif;
+}
+
+.h1 span {
+    font-family: "ProximaNova-Semibold", sans-serif;
+}
+
+form {
+    box-sizing: inherit;
+    width: 360px;
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #000000;
+    padding: 25px 25px 15px 25px;
+    background-color: #ffffff;
+}
+
+label {
+    display: inline-block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+    border-radius: 5px;
+    border: 0;
+    background-color: #f0f0f0;
+    color: #999999;
+    font-size: 15px;
+    padding: 10px;
+    font-family: "ProximaNova-Semibold", sans-serif;
+}
+
+::placeholder {
+    color: #aaaaaa;
+    font-family: "ProximaNova-Regular", sans-serif;
+}
+
+label:first-of-type {
+    margin-right: 10px;
+}
+
+label:nth-of-type(3) {
+    margin: 15px 0;
+}
+
+label:nth-of-type(5) {
+    margin: 15px 0 10px 0;
+}
+
+label:first-of-type input,
+label:nth-of-type(2) input {
+    width: 127.5px;
+}
+
+label:nth-of-type(3) input {
+    background: #f0f0f0 url("img/man.png") 97% 50% no-repeat;
+}
+
+label:nth-of-type(4) input {
+    width: 290px;
+}
+
+label:nth-of-type(5) input {
+    background: #f0f0f0 url("img/lock.png") 97% 50% no-repeat;
+}
+
+label:nth-of-type(3) input,
+label:nth-of-type(5) input {
+    padding-right: 40px;
+    width: 260px;
+}
+
+a {
+    text-decoration: none;
+    font-family: "ProximaNova-Semibold", sans-serif;
+    color: #999999;
+}
+
+a:hover {
+    color: #777777;
+    transition: 0.2s;
+}
+
+button {
+    width: 100px;
+    display: block;
+    margin: 15px auto;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    background-color: #fea15c;
+    border: 0;
+    border-radius: 5px;
+    font-family: "ProximaNova-Semibold", sans-serif;
+    cursor: pointer;
+}
+
+button:hover {
+    transition: 0.2s;
+    box-shadow: 0 0 2px #000000;
+    background-color: #ff9600;
+}
+
+p {
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+    color: #999999;
+}
+
+input[type="checkbox"],
+input[type="checkbox"] + label {
+    font-size: 12px;
+    vertical-align: middle;
+    color: #999999;
+}
+
+/* Checkbox styling */
+
+input[type="checkbox"]:checked,
+input[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label {
+    display: inline-block;
+    position: relative;
+    padding-left: 23px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label::before,
+input[type="checkbox"]:not(:checked) + label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    border: 0;
+    border-radius: 1px;
+    background-color: #f0f0f0;
+}
+
+input[type="checkbox"]:checked + label::after,
+input[type="checkbox"]:not(:checked) + label::after {
+    content: "";
+    position: absolute;
+    transition: all 0.1s ease;
+    left: 1px;
+    top: 1px;
+    width: 12px;
+    height: 8px;
+    border-left: 2px solid #fea15c;
+    border-bottom: 2px solid #fea15c;
+    transform: rotate(-45deg);
+}
+
+input[type="checkbox"]:not(:checked) + label::after {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + label::after {
+    opacity: 1;
+}
